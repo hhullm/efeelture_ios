@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="KGk-i7-Jjw" customClass="replyTableViewCell" customModule="newstart" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V7Z-fP-cUE">
+                        <rect key="frame" x="0.0" y="3" width="46" height="37.5"/>
+                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
+                        <state key="normal" title="Button"/>
+                    </button>
+                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RD6-3P-nH4">
+                        <rect key="frame" x="310" y="0.0" width="10" height="10"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="10" id="y1V-IU-zEv"/>
+                            <constraint firstAttribute="height" constant="10" id="y4X-Zl-ax4"/>
+                        </constraints>
+                        <state key="normal" title="x"/>
+                        <connections>
+                            <action selector="deletethisreply:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="c1h-zI-1xK"/>
+                        </connections>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="他在扒瞎" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w9P-JK-IIt">
+                        <rect key="frame" x="48" y="11" width="70" height="22"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="w9P-JK-IIt" firstAttribute="leading" secondItem="V7Z-fP-cUE" secondAttribute="trailing" constant="2" id="63u-bu-aAd"/>
+                    <constraint firstItem="RD6-3P-nH4" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Brm-QT-bh7"/>
+                    <constraint firstAttribute="bottom" secondItem="V7Z-fP-cUE" secondAttribute="bottom" constant="3" id="DLT-5O-FTI"/>
+                    <constraint firstItem="V7Z-fP-cUE" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="ObP-sZ-cPE"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="w9P-JK-IIt" secondAttribute="bottom" constant="3" id="ZYM-l4-hSK"/>
+                    <constraint firstItem="w9P-JK-IIt" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="3" id="ddu-xh-HW0"/>
+                    <constraint firstItem="V7Z-fP-cUE" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="3" id="o8f-EZ-hm1"/>
+                    <constraint firstAttribute="trailing" secondItem="RD6-3P-nH4" secondAttribute="trailing" id="qED-bU-WaB"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="content" destination="w9P-JK-IIt" id="J7I-lx-zBf"/>
+                <outlet property="deletereply" destination="RD6-3P-nH4" id="lQG-eh-qH7"/>
+                <outlet property="name" destination="V7Z-fP-cUE" id="CAP-TG-gwa"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>
